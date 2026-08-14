@@ -7,15 +7,18 @@ macro_rules! log {
 }
 
 fn main() {
-    // This is a simple Rust program that prints "Hello, world!" to the console.
+
+    //COMMENTS (SINGLE-LINE AND MULTI-LINE)
+
+    // This is a simple comment.
 
     /*
-     * This is a simple Rust program that prints "Hello, world!" to the console.
+     * This is a section of a multi-line comment.
      */
 
-    println!("Hello, world!");
+    //VARIABLES (MUTABLE AND IMMUTABLE)
 
-    /* a variable without mut is immutable, so it cannot be changed later in the program. Init _ as convention to indicate 
+    /* A variable without mut is immutable, so it cannot be changed later in the program. Init _ as convention to indicate 
     that the variable is not used. */
     let _y = 10;
 
@@ -31,18 +34,21 @@ fn main() {
 
     //CONTROL FLOW (If, else-if, else)
 
-    let x = 5;
-    let y = 10;
+    let x = 10;
 
-    if x > y {
-        println!("X is greater than Y");
-    } else if x < y {
-        println!("X is less than Y");
+    // Using if, else-if, and else to control the flow of the program based on conditions.
+    if x % 2 == 0 && x % 5 == 0 {  
+        println!("X is divisible by both 2 and 5");    
+    } else if x % 2 == 0 {
+        println!("X is divisible by 2");
+    } else if x % 5 == 0 {
+        println!("X is divisible by 5");
     } else {
-        println!("X is equal to Y");
+        println!("X is not divisible by 2 or 5");
     }
 
-    let z = if x > y { x } else { y };
+    // Using if as an expression to assign a value to a variable based on a condition.
+    let z = if x % 2 == 0 { x } else { x % 5 };
     println!("Z = {}", z);
 
     //LOOP
@@ -89,6 +95,19 @@ fn main() {
 
     for number in numbers.iter() {
         println!("The number is: {}", number);
+    }
+
+    //USE BREAK AND CONTINUE IN FOR LOOP
+    for number in 1..=10 {
+        if number % 2 == 0 {
+            continue; // Skip even numbers
+        }          
+
+        if number == 7 {
+            break; // Exit the loop when number reaches 7
+        }
+
+        println!("Odd number: {}", number);
     }
 
     //WHILE LOOP
