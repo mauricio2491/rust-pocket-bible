@@ -1,4 +1,4 @@
-# Rust Pocket Bible
+# Rust Pocket Bible 🦀
 
 A quick guide and reference for Rust basic features and fundamentals.
 
