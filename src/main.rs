@@ -1,4 +1,3 @@
-
 // this is a declarative macro that takes a name as an argument and prints a greeting message to the console.
 macro_rules! log {
     ($log:expr) => {
@@ -7,7 +6,6 @@ macro_rules! log {
 }
 
 fn main() {
-
     //COMMENTS (SINGLE-LINE AND MULTI-LINE)
 
     // This is a simple comment.
@@ -18,7 +16,7 @@ fn main() {
 
     //VARIABLES (MUTABLE AND IMMUTABLE)
 
-    /* A variable without mut is immutable, so it cannot be changed later in the program. Init _ as convention to indicate 
+    /* A variable without mut is immutable, so it cannot be changed later in the program. Init _ as convention to indicate
     that the variable is not used. */
     let _y = 10;
 
@@ -26,7 +24,7 @@ fn main() {
     let mut x = 5;
     println!("x = {}", x);
 
-    x = 6; 
+    x = 6;
 
     println!("x = {}", x);
 
@@ -37,8 +35,8 @@ fn main() {
     let x = 10;
 
     // Using if, else-if, and else to control the flow of the program based on conditions.
-    if x % 2 == 0 && x % 5 == 0 {  
-        println!("X is divisible by both 2 and 5");    
+    if x % 2 == 0 && x % 5 == 0 {
+        println!("X is divisible by both 2 and 5");
     } else if x % 2 == 0 {
         println!("X is divisible by 2");
     } else if x % 5 == 0 {
@@ -60,7 +58,7 @@ fn main() {
         if count == 10 {
             break count * 2;
         }
-    }; 
+    };
 
     println!("The result is {}", result);
 
@@ -73,7 +71,7 @@ fn main() {
 
         'inner: loop {
             println!("Inner count: {}", inner_count);
-             inner_count += 1;
+            inner_count += 1;
 
             if inner_count == 5 {
                 break 'inner;
@@ -101,7 +99,7 @@ fn main() {
     for number in 1..=10 {
         if number % 2 == 0 {
             continue; // Skip even numbers
-        }          
+        }
 
         if number == 7 {
             break; // Exit the loop when number reaches 7
@@ -138,5 +136,4 @@ fn main() {
     }
 
     println!("Exited the loop after reaching an odd number greater than or equal to 7.");
-
 }
