@@ -1,4 +1,6 @@
-// this is a declarative macro that takes a name as an argument and prints a greeting message to the console.
+
+// A Declarative macro is a macro that is defined using the macro_rules! syntax. It allows you to define a pattern and specify how to transform that pattern into code. Declarative macros are often used for code generation, allowing you to write more concise and reusable code.
+// this is a declarative macro that takes a single expression as input and prints it to the console with a "[LOG]:" prefix. It is useful for logging messages in the application.
 macro_rules! log {
     ($log:expr) => {
         println!("[LOG]: {}", $log);
